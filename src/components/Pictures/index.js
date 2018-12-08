@@ -23,6 +23,7 @@ export default class Pictures extends React.Component {
       </tr>
     );
   }
+
   render() {
     return (
       <table className="pictures">
