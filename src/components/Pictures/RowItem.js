@@ -5,12 +5,13 @@ export default class RowItem extends React.Component {
     src: ""
   };
   componentDidMount() {
-    let image = document.getElementsByClassName("pictures_image");
+    let image = document.getElementsByClassName("pictures__image")[0];
 
     console.log("Image is ", image);
+    console.log("Props", this.props);
     let reader = new FileReader();
-    reader.onloadend = function() {
-      image.src = reader.result;
+    reader.onload = function(e) {
+      image.src = e.target.result;
     };
     if (this.props.file) {
       reader.readAsDataURL(this.props.file);
