@@ -5,6 +5,7 @@ import "./Pictures.css";
 export default class Pictures extends React.Component {
   render() {
     const items = [];
+
     for (let key = 0; key < this.props.pictures.length; key++) {
       items.push(<RowItem key={key} file={this.props.pictures[key]} />);
     }
