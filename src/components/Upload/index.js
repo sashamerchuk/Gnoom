@@ -8,18 +8,17 @@ export default class extends React.Component {
   };
   renderLabel() {
     return (
-      <div>
-        <label className="label">
-          <input
-            id="menu_images"
-            type="file"
-            name="image"
-            multiple
-            onChange={this.onInputChange}
-          />
-          Choose Your Foto!
-        </label>
-      </div>
+      <label className="label">
+        <i class="material-icons">add_a_photo</i>
+        <input
+          id="menu_images"
+          type="file"
+          name="image"
+          multiple
+          onChange={this.onInputChange}
+        />
+        Choose Your Foto!
+      </label>
     );
   }
 
