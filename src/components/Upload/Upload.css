@@ -1,12 +1,11 @@
 .label {
   color: rgb(252, 252, 252);
   width: 200px;
-  height: 50px;
+  height: 60px;
   display: block;
   position: relative;
-  text-align: center;
   background-color: rgb(0, 0, 0);
-  border-radius: 10px;
+  border-radius: 4px;
   border: 1px solid black;
   box-shadow: 0 0 10px black;
   font-weight: 700;
@@ -19,9 +18,13 @@
   overflow: hidden;
 }
 .material-icons {
-  margin-top: 10px;
-  margin-right: 5px;
+  margin-top: 13px;
+  margin-right: 7px;
+  margin-left: 15px;
 }
 .App-header {
   text-align: center;
+}
+.pictures {
+  padding: 25px;
 }
