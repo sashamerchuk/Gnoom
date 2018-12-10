@@ -9,9 +9,7 @@ export default class extends React.Component {
   renderLabel() {
     return (
       <label className="label">
-      
-        <i class="material-icons">add_a_photo</i>
-
+        <i className="material-icons">add_a_photo</i>
         <input
           id="menu_images"
           type="file"

@@ -1,12 +1,11 @@
 import React from "react";
 
-export default class RowItem extends React.Component {
+export default class FalseItem extends React.Component {
   state = {
     src: "",
     size: ""
   };
   componentDidMount() {
-    console.log("Prop", this.props.file);
     this.setState({ size: (this.props.file.size / 1000000).toFixed(1) });
     let reader = new FileReader();
     reader.onload = e => {
@@ -15,6 +14,8 @@ export default class RowItem extends React.Component {
     if (this.props.file) {
       reader.readAsDataURL(this.props.file);
     }
+
+    console.log("Proping", this.props);
   }
   render() {
     return (
@@ -25,7 +26,7 @@ export default class RowItem extends React.Component {
         <td className="dataPict">{this.state.size}Mb</td>
         <td className="dataPict">1123</td>
         <td>
-          <a href={this.props.file}>Download</a>
+          <a href={this.state.src}>Download</a>
         </td>
       </tr>
     );
