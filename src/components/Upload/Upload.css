@@ -1,11 +1,22 @@
 .label {
-  color: rgb(255, 254, 254);
+
+  color: black;
+  z-index: 1;
+
   height: 50px;
   width: 200px;
   display: block;
   position: relative;
+
+  margin: 0 auto;
+  width: 200px;
+  font-size: normal;
+  background-color: white;
+  line-height: 50px;
+
   text-align: center;
   background-color: rgb(0, 0, 0);
+
   border-radius: 10px;
   border: 1px solid black;
   box-shadow: 0 0 10px black;
