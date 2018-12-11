@@ -10,21 +10,35 @@
   box-shadow: 0 0 10px black;
   font-weight: 700;
   margin: 0 auto;
+  text-align: center;
+  padding: 0 20px;
+  overflow: hidden;
+  cursor: pointer;
 }
 #menu_images {
-  width: 0.1px;
-  height: 0.1px;
+  width: 100%;
+  height: 100%;
   opacity: 0;
   overflow: hidden;
+  padding-top: 60px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  cursor: pointer;
 }
 .material-icons {
-  margin-top: 13px;
-  margin-right: 7px;
-  margin-left: 15px;
+  margin-right: 10px;
+  vertical-align: middle;
+  display: inline-block;
 }
 .App-header {
   text-align: center;
 }
 .pictures {
   padding: 25px;
+}
+.text {
+  vertical-align: middle;
+  display: inline-block;
+  line-height: 60px;
 }
