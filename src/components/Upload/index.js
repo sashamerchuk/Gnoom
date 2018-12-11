@@ -4,18 +4,19 @@ import "./Upload.css";
 
 export default class extends React.Component {
   onInputChange = event => {
-    console.log("file is ", this.props.flower);
-
-    //Array.from(event.target.files);
-    // this.props.flower(this.setState({ pictures: [event.target.files] }));
-    this.props.flower();
-    console.log("Props in upload", this.props.flower);
-    console.log("Flower is is ", this.props);
-    console.log("Files is", event.target.files);
+    let items = [];
+    this.props.flower(items);
+    console.log(event.target.files);
+    for (let key = 0; key < event.target.files.length; key++) {
+      if (key < 10 && event.target.files[key].size < 50000000) {
+        items.push(event.target.files[key]);
+      }
+    }
   };
   renderLabel() {
     return (
-      <label className="label">
+      <div className="label">
+        <i className="material-icons">add_a_photo</i>
         <input
           id="menu_images"
           type="file"
@@ -23,8 +24,8 @@ export default class extends React.Component {
           multiple
           onChange={this.onInputChange}
         />
-        Choose Your Foto!
-      </label>
+        <span className="text">Choose Your Foto!</span>
+      </div>
     );
   }
 
