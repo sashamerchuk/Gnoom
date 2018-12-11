@@ -4,7 +4,14 @@ import "./Upload.css";
 
 export default class extends React.Component {
   onInputChange = event => {
-    this.props.flower(Array.from(event.target.files));
+    let items = [];
+    this.props.flower(items);
+    console.log(event.target.files);
+    for (let key = 0; key < event.target.files.length; key++) {
+      if (key < 10 && event.target.files[key].size < 50000000) {
+        items.push(event.target.files[key]);
+      }
+    }
   };
   renderLabel() {
     return (
