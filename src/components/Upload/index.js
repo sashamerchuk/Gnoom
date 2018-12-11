@@ -24,7 +24,7 @@ export default class extends React.Component {
           multiple
           onChange={this.onInputChange}
         />
-        Choose Your Foto!
+        <span className="text">Choose Your Foto!</span>
       </label>
     );
   }
