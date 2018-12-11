@@ -15,7 +15,7 @@ export default class extends React.Component {
   };
   renderLabel() {
     return (
-      <label className="label">
+      <div className="label">
         <i className="material-icons">add_a_photo</i>
         <input
           id="menu_images"
@@ -25,7 +25,7 @@ export default class extends React.Component {
           onChange={this.onInputChange}
         />
         <span className="text">Choose Your Foto!</span>
-      </label>
+      </div>
     );
   }
 
