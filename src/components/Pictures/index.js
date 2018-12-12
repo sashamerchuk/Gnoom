@@ -7,7 +7,6 @@ export default class Pictures extends React.Component {
     const items = [];
 
     for (let key = 0; key < this.props.pictures.length; key++) {
-      console.log("pictuf", this.props.pictures[key].size);
       items.push(<RowItem key={key} file={this.props.pictures[key]} />);
     }
     return (

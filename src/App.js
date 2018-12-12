@@ -21,7 +21,7 @@ class App extends Component {
             <h1>Gnoom</h1>
           </header>
 
-          <Upload flower={this.onChange} />
+          <Upload onChange={this.onChange} />
           <Pictures pictures={this.state.pictures} />
         </main>
       </div>
