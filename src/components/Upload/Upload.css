@@ -46,3 +46,13 @@
   display: inline-block;
   line-height: 60px;
 }
+.downLoad.material-icons {
+  color: rgb(0, 0, 0);
+  text-align: center;
+  text-decoration: none;
+  text-shadow: 0 0 0 black;
+  transition: text-shadow 0.15s;
+}
+.downLoad.material-icons:hover {
+  text-shadow: 0 0 1px black;
+}

@@ -49,8 +49,12 @@ export default class RowItem extends React.Component {
         <td className="dataPict">{this.state.compressedSize}Kb</td>
         <td>
           {this.state.compressed && (
-            <a className="downLoad" href={this.state.compressed} download>
-              Download
+            <a
+              className="downLoad material-icons"
+              href={this.state.compressed}
+              download
+            >
+              cloud_download
             </a>
           )}
         </td>
