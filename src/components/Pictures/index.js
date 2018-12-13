@@ -8,17 +8,25 @@ export default class Pictures extends React.Component {
 
     for (let key = 0; key < this.props.pictures.length; key++) {
       items.push(<RowItem key={key} file={this.props.pictures[key]} />);
+
+      console.log("items", items);
+      console.log(this.props.pictures.length);
     }
-    return (
-      <table className="pictures">
-        <tbody>
-          <tr className="pictures__item">
-            <th>Compressed Size</th>
-            <th>Original Size</th>
-          </tr>
-          {items}
-        </tbody>
-      </table>
-    );
+    for (let key1 = 0; key1 < this.props.pictures.length; ++key1) {
+      return (
+        <table className="pictures">
+          <tbody>
+            <tr className="pictures__item">
+              <th />
+              <th>Compressed Size</th>
+              <th>Original Size</th>
+            </tr>
+            {items}
+          </tbody>
+        </table>
+      );
+    }
+
+    return <div />;
   }
 }
