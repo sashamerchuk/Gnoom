@@ -20,7 +20,7 @@ export default class RowItem extends React.Component {
       })
       .then(data => {
         this.setState({ compressed: data.source });
-        this.setState({ compressedSize: data.source.size });
+        this.setState({ compressedSize: data.size / 1000 });
       })
       .catch(function(error) {
         console.log("There is a problem " + error.message);

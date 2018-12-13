@@ -22,8 +22,8 @@ app.get("/", function(req, res) {
 });
 
 app.post("/upload", upload.single("picture"), async (req, res) => {
-  await sharp(req.file.path)
-    .webp({ quality: 60 })
+  const data = await sharp(req.file.path)
+    .webp({ quality: 80 })
     .toFile(`${req.file.path}.webp`);
-  res.send({ source: `/uploads/${req.file.filename}.webp` });
+  res.send({ source: `/uploads/${req.file.filename}.webp`, size: data.size });
 });
