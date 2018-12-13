@@ -44,9 +44,9 @@ export default class RowItem extends React.Component {
         <td>
           <img alt={"Gnoom"} src={this.state.src} className="pictures__image" />
         </td>
-        <td className="dataPict">{this.state.compressedSize}Kb</td>
-        <td className="dataPict">{this.state.size}Kb</td>
 
+        <td className="dataPict">{this.state.size}Kb</td>
+        <td className="dataPict">{this.state.compressedSize}Kb</td>
         <td>
           {this.state.compressed && (
             <a className="downLoad" href={this.state.compressed} download>

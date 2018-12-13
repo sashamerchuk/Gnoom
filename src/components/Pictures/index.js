@@ -18,14 +18,14 @@ export default class Pictures extends React.Component {
       console.log(this.props.pictures.length);
     }
     // Саня, що це???!!! для чого тут for? функція може повернути тільки один return
-    for (let key1 = 0; key1 < this.props.pictures.length; ++key1) {
+    if (this.props.pictures.length) {
       return (
         <table className="pictures">
           <tbody>
             <tr className="pictures__item">
               <th />
-              <th>Compressed Size</th>
               <th>Original Size</th>
+              <th>Compressed Size</th>
             </tr>
             {items}
           </tbody>
