@@ -20,7 +20,7 @@ export default class Pictures extends React.Component {
     // Саня, що це???!!! для чого тут for? функція може повернути тільки один return
     if (this.props.pictures.length) {
       return (
-        <table className="pictures">
+        <table className="pictures" id="phrases">
           <tbody>
             <tr className="pictures__item">
               <th />
